@@ -1,5 +1,6 @@
 # Advanced-Physical-Design-using-OpenLANE-Sky130-Overview
-![1](https://user-images.githubusercontent.com/20563301/120014244-74ad1d00-bfff-11eb-9d53-8df2784ecb07.PNG)
+
+![work2](https://user-images.githubusercontent.com/20563301/123817565-e71e5f00-d915-11eb-8fa1-ba4fb781980c.PNG)
 
 This repository contains the usage of tools like iverilog, gtkwave and yosys for open-source RTL Design. The content is documentation of tasks carried out during VSD "RTL Design Using Verilog With SKY130 Technology".
 
