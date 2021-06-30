@@ -61,5 +61,5 @@ This particular workshop covers the various aspects of design in Verilog HDL bot
   
   # Day 1 Introduction to Verilog RTL Design and Synthesis
   
-   i.	OpenLANE Initialization
+   ## 	OpenLANE Initialization
   
