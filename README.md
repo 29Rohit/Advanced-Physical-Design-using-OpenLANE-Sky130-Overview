@@ -12,7 +12,6 @@ This particular workshop covers the various aspects of design in Verilog HDL bot
 
 - [Day 1 Introduction to Verilog RTL Design and Synthesis](#Day-1-Introduction-to-Verilog-RTL-Design-and-Synthesis)
   * [Setup the lab instance with libraries and verilog files](#Setup-the-lab-instance-with-libraries-and-verilog-files)
-    - [OpenLANE Initialization](#openlane-initialization)
   * [Labs using iverilog and gtkwave](#Labs-using-iverilog-and-gtkwave)
   * [Introduction to Yosys and Logic synthesis](#Introduction-to-Yosys-and-Logic-synthesis)
   * [Labs using Yosys and Sky130 for 2x1 Multiplex](#Labs-using-Yosys-and-Sky130-for-2-x-1-Multiplex)
@@ -58,8 +57,4 @@ This particular workshop covers the various aspects of design in Verilog HDL bot
   The above list of tools shows that, many different tools are required for various tasks in Physical VLSI Design. Each tool in itself have number of system requirements and require various supporting tools to be installed. Installing each tool one-by-one seems in-efficient. This is made easy by some custom scripts that setup the required tools and environment for them in just a few easy steps. To install all the required tools, one can refer to the below mentioned repositories:
   - [VSDFlow](https://github.com/kunalg123/vsdflow) - Installs Yosys, Magic, OpenTimer, OpenSTA and some other supporting tools
   - [OpenLANE Build Scripts](https://github.com/nickson-jose/openlane_build_script) - Install all required OpenROAD and some supporting tools
-  
-  # Day 1 Introduction to Verilog RTL Design and Synthesis
-  
-   ## 	OpenLANE Initialization
   
