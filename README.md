@@ -172,7 +172,8 @@ About Google SkyWater PDK
 -	Clock Tree Synthesis (CTS)
 -	Routing
 -	GDSII Streaming
-        All the steps are further discussed in details in the repository.
+
+  All the steps are further discussed in details in the repository.
 
 
 ### Introduction to Open LANE detailed ASIC design flow
@@ -226,7 +227,6 @@ b.	Interactive: it peforms the flow one at a time.
 -	For invoking OpenLANE in Linux Ubuntu, we should first run the docker everytime we use OpenLANE. This is done by using the following script:
 ```
 docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6
-
 ```
 -	A custom shell script or commands can be generated to make the task simpler.
 •	To invoke OpenLANE run the ./flow.tcl script.
@@ -242,14 +242,12 @@ docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_
 -	The first step after invoking OpenLANE is to import the openlane package of required version. This is done using following command. Here 0.9 is the required version of OpenLANE.
 ```
 package require openlane 0.9
-
 ```
 -	The next step is to prepare our design for the OpenLANE flow. This is done using following command:
 
 
 ```
 prep -design <design-name>
-
 ```
 -	Some additional flags that can be used while preparation are:
 
