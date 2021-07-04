@@ -829,3 +829,18 @@ To generate GDSII file
 
 `gds` file will be generated at location `/home/rohit/Desktop/designs/picorv32a/runs/test1/results/magic/picorv32a.gds`
 
+
+ # Acknowledgements 
+  - Kunal Ghosh , Co-founder (VSD Corp. Pvt. Ltd) 
+  - Mansi Mohapatra
+  - Milli Anand
+  # References
+  - https://www.vlsisystemdesign.com/advanced-physical-design-using-openlane-sky130/
+  - https://github.com/The-OpenROAD-Project/OpenLane/blob/master/configuration/README.md
+  - https://gitlab.com/gab13c/openlane-workshop
+  - https://github.com/29Rohit/OpenSource_Physical_Design.git
+  
+ 
+  
+  
+  
