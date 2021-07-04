@@ -835,7 +835,7 @@ GDSII
   
 GDSII files are usually the final output product of the IC design cycle and are given to silicon foundries for IC fabricationIt is a binary file format representing planar geometric shapes, text labels, and other information about the layout in hierarchical form.
 
-To generate GDSII file
+To generate GDSII file, type the below command in openlane after the routing
 ```
 % run_magic
 ```
