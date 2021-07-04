@@ -676,7 +676,7 @@ run_cts
  ![9](https://user-images.githubusercontent.com/20563301/124389962-229a9e00-dd07-11eb-8837-133c64a22f21.PNG)
   
  
-Setup Timings Analysis
+Setup Timings and Hold Analysis
 -	Setup time delay is the time taken by the capture Flop for the input to settle at the center of flop ie internal delay due first MUX.
 -	This delay not only resist and but always is less than combinational delay
 -	Jitter is the temporary variation of Clock period by real chip/PLL to flip flops.
