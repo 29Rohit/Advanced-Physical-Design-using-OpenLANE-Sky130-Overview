@@ -311,14 +311,14 @@ The following commands are used to perform Floorpalnning:
   
 a.	To see the I/O pins in Floorplanning
 ```
--	run_floorplan
--	cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-07_05-54/logs/floorplan less 4-ioPlacer.log
+•	run_floorplan
+•	cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-07_05-54/logs/floorplan less 4-ioPlacer.log
 ```
 b.	To see the Floorplanning in OpenLane
 
 ```
--	cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-07_05-54/results/floorplan
--	less picorv32a.floorplan.def
+•	cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-07_05-54/results/floorplan
+•	less picorv32a.floorplan.def
 ```
 ![5](https://user-images.githubusercontent.com/20563301/124389189-b23e4d80-dd03-11eb-944e-b9797da92a44.PNG)
    
@@ -330,8 +330,10 @@ Magic tool provide a very easy to use interface to design various layers of the 
 
 ```
 •	run_floorplan
+  
 •	cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-07_05-54/results/floorplan
-•	magic -T /home/rohit/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+  
+•	magic -T /home/rohit/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &  
 ```
 ![6](https://user-images.githubusercontent.com/20563301/124389198-bd917900-dd03-11eb-94b4-9255f818a7a4.PNG)
  
@@ -437,20 +439,21 @@ Characterization is a well-defined flow consisting of the following steps:
 The following commands are used to change the I/O placer in floorplan
   
 ```
--	cd Desktop/work/tools/openlane_working_dir/openlane
--	docker
--	./flow.tcl -interactive
--	package require openlane 0.9
--	prep -design picorv32a 
--	run_synthesis
--	run_floorplan
--	cd configuration
--	less floorplan.tcl
--	set ::env(FP_IO_MODE) 1
--	set ::env(FP_IO_MODE) 2
--	run_floorplan
--	cd designs/picorv32a/runs/02-07_09-05/results/floorplan
--	magic -T /home/rohit/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+•	cd Desktop/work/tools/openlane_working_dir/openlane
+•	docker
+•	./flow.tcl -interactive
+•	package require openlane 0.9
+•	prep -design picorv32a 
+•	run_synthesis
+•	run_floorplan
+•	cd configuration
+•	less floorplan.tcl
+•	set ::env(FP_IO_MODE) 1
+•	set ::env(FP_IO_MODE) 2
+•	run_floorplan
+•	cd designs/picorv32a/runs/02-07_09-05/results/floorplan
+•	magic -T /home/rohit/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+
 ```
   
   
@@ -465,12 +468,13 @@ The following commands are used to change the I/O placer in floorplan
 -	The following commands are used for DC/static characteristics simulation in Spice
 
 ```
-- cd [directory]
-- source .cir file
-- run
-- setplot
-- display
-- plot out  VS in
+•	cd [directory]
+•	source .cir file
+•	run
+•	setplot
+•	display
+•	plot out  VS in
+
 ```
 -	Depending upon the W/L paraments ,CMOS invertor static characteristics is simulated in Spice
 -	Switching Threshold is a point in static characteristics where Vin =Vout and prove the CMOS invertor is robust device.
@@ -579,15 +583,15 @@ b.	Width of standard cell should be in odd multiple of X track pitch and height 
   
 - The following commands are used to create and extract LEF from magic
 ```
--	cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/
-  
--	magic -T sky130A.tech sky130_inv.mag &
-  
--	grid 0.46um 0.34um 0.23um 0.17um
-  
--	save sky130_vsdinv.mag 
-  
--	lef write
+•	cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/
+
+•	magic -T sky130A.tech sky130_inv.mag &
+
+•	grid 0.46um 0.34um 0.23um 0.17um
+
+•	save sky130_vsdinv.mag 
+
+•	lef write
 ```
   
   
@@ -595,9 +599,11 @@ b.	Width of standard cell should be in odd multiple of X track pitch and height 
 The following commands are used to see the delay, synthesis and Placement for a modified LEF file
   
 ```
-- Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/ cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/  
-- Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/libs cp sky130_fd_sc_hd_*  ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
-- Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a vim config.tcl
+•	Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/ cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/  
+  
+•	Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/libs cp sky130_fd_sc_hd_*  ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+  
+•	Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a vim config.tcl
   
 ```
  Edit the config.tcl according to below file
@@ -704,13 +710,13 @@ In openROAD the timing analysis is done by creating a db file from `lef` and `de
 This creates db file in `$OPENLANE_ROOT` directory.
 
 ```
-% read_db picorv32a_cts.db
-% read_verilog /openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/synthesis/picorv32a.synthesis_cts.v
-% read_liberty -max $::env(LIB_SLOWEST)
-% read_liberty -min $::env(LIB_FASTEST)
-% read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
-% set_propagated_clock [all_clocks]
-% report_checks -path_delay min_max -format full_clock_expanded -digits 4
+•	% read_db picorv32a_cts.db
+•	% read_verilog /openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/synthesis/picorv32a.synthesis_cts.v
+•	% read_liberty -max $::env(LIB_SLOWEST)
+•	% read_liberty -min $::env(LIB_FASTEST)
+•	% read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+•	% set_propagated_clock [all_clocks]
+•	% report_checks -path_delay min_max -format full_clock_expanded -digits 4
 ```
 
 We have done pre-CTS timing analysis to get setup and hold slack and post-CTS timing analysis to get setup and hold slack. 
@@ -718,26 +724,26 @@ For typical corners (`LIB_SYN_COMPLETE` env variable which points to typical lib
 
 [horizontal]
 `hold slack`:: 0.0167 ns
-`setup slack`:: 4.5880 ns
+`setup slack`:: 4.5420 ns
 
 ```
-% echo $::env(CTS_CLK_BUFFER_LIST)
-sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8
+•	% echo $::env(CTS_CLK_BUFFER_LIST)
+•	sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8
 ```
 
 Trying removing `sky130_fd_sc_hd__clkbuf_1` from clock tree and do post cts timing analysis
 ```
-% set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]
-sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8
-% echo $::env(CTS_CLK_BUFFER_LIST)
-sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8
+•	% set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]
+•	sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8
+•	% echo $::env(CTS_CLK_BUFFER_LIST)
+•	sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8
 ```
 
 ```
-% echo $::env(CURRENT_DEF)
-/openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/cts/picorv32a.cts.def
-% 
-% set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/placement/picorv32a.placement.def
+•	% echo $::env(CURRENT_DEF)
+•	/openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/cts/picorv32a.cts.def
+•	% 
+•	% set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/placement/picorv32a.placement.def
 ```
 
 Now run openROAD and do a timing analysis as mentioned above.
@@ -749,21 +755,22 @@ Including large size clock buffers in clock path improves slack but area increas
 
 To check the clock skew
 ```
-% report_clock_skew -hold
-Clock clk
-Latency      CRPR       Skew
-_35319_/CLK ^
-   1.31
-_34316_/CLK ^
-   0.80      0.00       0.51
+•	% report_clock_skew -hold
+•	Clock clk
+•	Latency      CRPR       Skew
+•	_35319_/CLK ^
+•	   1.31
+•	_34316_/CLK ^
+•	   0.80      0.00       0.51
 
-% report_clock_skew -setup
-Clock clk
-Latency      CRPR       Skew
-_35319_/CLK ^
-   1.31
-_34316_/CLK ^
-   0.80      0.00       0.51
+•	% report_clock_skew -setup
+•	Clock clk
+•	Latency      CRPR       Skew
+•	_35319_/CLK ^
+•	   1.31
+•	_34316_/CLK ^
+•	   0.80      0.00       0.51
+
 ```  
 # Day 5 - Final steps for RTL2GDS
 
