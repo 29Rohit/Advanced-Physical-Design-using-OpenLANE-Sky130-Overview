@@ -749,7 +749,7 @@ Trying removing `sky130_fd_sc_hd__clkbuf_1` from clock tree and do post cts timi
 Now run openROAD and do a timing analysis as mentioned above.
 [horizontal]
 `hold_slack`:: 0.1828 ns
-`setup_slack`:: 4.7495 ns
+`setup_slack`:: 4.5457 ns
 
 Including large size clock buffers in clock path improves slack but area increases.
 
