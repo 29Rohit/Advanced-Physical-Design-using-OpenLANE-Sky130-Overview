@@ -803,17 +803,19 @@ After routing magic tool can be used to get routing view
 ```
  /home/rohit//work/tools/openlane_working_dir/openlane/designs/picorv32a/runs$ magic -T $PDK_ROOT/sky130A/libs.tech/magic/sky130A.tech lef read test1/tmp/merged.lef def read test1/results/routing/picorv32a.def &
 ```
-![5](https://user-images.githubusercontent.com/20563301/124388059-a0a67700-dcfe-11eb-8b66-0a5ccdca62b9.PNG)
+![8](https://user-images.githubusercontent.com/20563301/124390819-e10bf200-dd0a-11eb-9a2f-fdc90291066a.PNG)
   
-![8](https://user-images.githubusercontent.com/20563301/124388063-a7cd8500-dcfe-11eb-999b-4ecdb4766884.PNG)
+![5](https://user-images.githubusercontent.com/20563301/124390824-e5d0a600-dd0a-11eb-8616-131b22e604b6.PNG)
 
 
   
 ## SPEF File and GDSII Generation
   After routing has been completed interconnect parasitics can be extracted to perform sign-off post-route STA analysis. The parasitics are extracted into a SPEF file using SPEF-Extractor.
 
-`spef` file will be generated after `run_routing` command at location `$OPENLANE_ROOT/designs/picorv32a/runs/test1/results/routing/picorv32a.spef`
+`spef` file will be generated after `run_routing` command at location 
+`/home/rohit/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/test1/results/routing/picorv32a.spef`
   
+![9](https://user-images.githubusercontent.com/20563301/124390863-24666080-dd0b-11eb-958e-745ccbb721f1.PNG)
 
 
 GDSII
@@ -824,7 +826,8 @@ To generate GDSII file
 ```
 % run_magic
 ```
+![10](https://user-images.githubusercontent.com/20563301/124390866-27f9e780-dd0b-11eb-839e-679ef9e48d5d.PNG)
 
 
-`gds` file will be generated at location `$OPENLANE_ROOT/designs/picorv32a/runs/test1/results/magic/picorv32a.gds`
+`gds` file will be generated at location `/home/rohit/Desktop/designs/picorv32a/runs/test1/results/magic/picorv32a.gds`
 
