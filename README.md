@@ -317,7 +317,7 @@ a.	To see the I/O pins in Floorplanning
 b.	To see the Floorplanning in OpenLane
 
 ```
--	 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-07_05-54/results/floorplan
+-	cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-07_05-54/results/floorplan
 -	less picorv32a.floorplan.def
 ```
 ![5](https://user-images.githubusercontent.com/20563301/124389189-b23e4d80-dd03-11eb-944e-b9797da92a44.PNG)
@@ -329,10 +329,9 @@ b.	To see the Floorplanning in OpenLane
 Magic tool provide a very easy to use interface to design various layers of the layout. It also has an in-built DRC check fetaure
 
 ```
--	run_floorplan
--	cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-07_05-54/results/floorplan
--	magic -T /home/rohit/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
-
+•	run_floorplan
+•	cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/01-07_05-54/results/floorplan
+•	magic -T /home/rohit/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
 ```
 ![6](https://user-images.githubusercontent.com/20563301/124389198-bd917900-dd03-11eb-94b4-9255f818a7a4.PNG)
  
@@ -659,6 +658,7 @@ c.	Restricting the maximum fan-out of an element.
 
 
 ## Clock Tree Synthesis using TritonCTS
+  
 -	Clock Tree Synthesis(CTS) is a process which makes sure that the clock gets distributed evenly to all sequential elements in a design. The goal of CTS is to minimize the clock latency and skew. There are several CTS techniques like:
 a.	H - Tree
 b.	X - Tree
@@ -676,7 +676,15 @@ run_cts
  ![9](https://user-images.githubusercontent.com/20563301/124389962-229a9e00-dd07-11eb-8837-133c64a22f21.PNG)
   
  
-
+Setup Timings Analysis
+-	Setup time delay is the time taken by the capture Flop for the input to settle at the center of flop ie internal delay due first MUX.
+-	This delay not only resist and but always is less than combinational delay
+-	Jitter is the temporary variation of Clock period by real chip/PLL to flip flops.
+-	It can be solved by introducing a setup uncertainty before the setup time.
+-	Hold time delay is the time taken by the capture flop to send the input data to outside of the flop ie internal delay of second MUX.
+  
+  
+  
   
 Further analysis of CTS in done in openROAD which is integrated in openLANE flow using openSTA tool.
 ```
