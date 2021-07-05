@@ -729,10 +729,13 @@ This creates db file in `$OPENLANE_ROOT` directory.
 We have done pre-CTS timing analysis to get setup and hold slack and post-CTS timing analysis to get setup and hold slack. 
 For typical corners (`LIB_SYN_COMPLETE` env variable which points to typical library) setup and hold slack are met.
 
-[horizontal]
-`hold slack`:: 0.0167 ns
-`setup slack`:: 4.5420 ns
-
+  | Name of slack | Value |
+  | --- | --- |
+  | hold_slack | 0.1667 ns |
+  | setup_slack | 4.5420 ns |
+  
+  
+  
 ```
 •	% echo $::env(CTS_CLK_BUFFER_LIST)
 •	sky130_fd_sc_hd__clkbuf_1 sky130_fd_sc_hd__clkbuf_2 sky130_fd_sc_hd__clkbuf_4 sky130_fd_sc_hd__clkbuf_8
@@ -754,10 +757,14 @@ Trying removing `sky130_fd_sc_hd__clkbuf_1` from clock tree and do post cts timi
 ```
 
 Now run openROAD and do a timing analysis as mentioned above.
-[horizontal]
-`hold_slack`:: 0.1840 ns
-`setup_slack`:: 4.7490 ns
-Including large size clock buffers in clock path improves slack but area increases.
+  | Name of slack | Value |
+  | --- | --- |
+  | hold_slack | 0.1667 ns |
+  | setup_slack | 4.7490 ns |
+  
+  
+  
+  - Including large size clock buffers in clock path improves slack but area increases.
 
 To check the clock skew
 ```
@@ -805,11 +812,16 @@ The following command is used for routing.
 `
 run_routing
 `
- [horizontal]
-`*FastRoute*`:: Performs global routing to generate a guide file for the detailed router
-`*CU-GR*`:: Another option for performing global routing.
-`*TritonRoute*`:: Performs detailed routing
-`*SPEF-Extractor*`:: Performs SPEF extraction
+  
+  
+  | Name of Routing | Feature |
+  | --- | --- |
+  | FastRoute | Performs global routing to generate a guide file for the detailed router |
+  | CU-GR | Another option for performing global routing. |
+  | TritonRoute | Performs detailed routing |
+  | SPEF-Extractor | Performs SPEF extraction |
+  
+
   
 ![3](https://user-images.githubusercontent.com/20563301/124387942-0cd4ab00-dcfe-11eb-9377-7467cbed6425.PNG)
   
