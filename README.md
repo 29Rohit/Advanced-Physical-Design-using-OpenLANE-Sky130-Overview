@@ -711,7 +711,8 @@ In openROAD the timing analysis is done by creating a db file from `lef` and `de
 % write_db picorv32a_cts.db
 ```
   
-![11](https://user-images.githubusercontent.com/20563301/124388458-aa30de80-dd00-11eb-89d1-5ad1775cdbd8.PNG)
+![11](https://user-images.githubusercontent.com/20563301/124416419-94f59780-dd74-11eb-9350-91424b709121.PNG)
+
  
 
 This creates db file in `$OPENLANE_ROOT` directory.
