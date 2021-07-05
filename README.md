@@ -573,8 +573,10 @@ i.	Magic Layout to Standard Cell LEF
 ![1](https://user-images.githubusercontent.com/20563301/124389694-e155be80-dd05-11eb-8217-f945eeeb549b.PNG)
   
   
--	There are rules which should be follow for proper LEF
+-	There are some rules which should be follow for proper LEF
+  
 a.	The Input and Output ports must lie on intersection of vertical and horizontal track.
+  
 b.	Width of standard cell should be in odd multiple of X track pitch and height should be in odd multiple of Y track pitch.
 
 
@@ -636,13 +638,13 @@ b.	At every level, each node should drive the same load.
 ## Timing Analysis using OpenSTA
   
 -	The Static Timing Analysis(STA) of the design is carried out using the OpenSTA tool. The analysis can be done in to different ways.
-i.	Inside OpenLANE flow: This is by invoking openroad command inside the OpenLANE flow. In the openroad OpenSTA is invoked.
+  
+i. Inside OpenLANE flow: This is by invoking openroad command inside the OpenLANE flow. In the openroad OpenSTA is invoked.
 
-ii.	Outside OpenLANE flow: This is done by directly invoking OpenSTA in the command line. This requires extra configuration to be done to specific the verilog file, constraints, clcok period and other required parameters.
+ii. Outside OpenLANE flow: This is done by directly invoking OpenSTA in the command line. This requires extra configuration to be done to specific the verilog file, constraints, clcok period and other required parameters.
 OpenSTA is invoked using the below mentioned command.
 ```
-sta <conf-file-if-required>
-
+sta sta.conf
 ```
   
 ![6](https://user-images.githubusercontent.com/20563301/124389917-f67f1d00-dd06-11eb-94ff-579220e3c25f.PNG)
@@ -653,6 +655,8 @@ sta <conf-file-if-required>
 2.	Setup Time Slack
 3.	Total Negative Slack (= 0.00, if no negative slack)
 4.	Worst Negative Slack (= 0.00, if no negative slack)
+  
+  
 -	If the design produces any setup timing violaions in the analysis, it can be eliminated or reduced using techniques as follows:
 a.	Increase the clock period (Not always possible as generally operating frequency is freezed in the specifications)
 b.	Scaling the buffers (Causes increase in design area)
@@ -669,10 +673,13 @@ c.	Restricting the maximum fan-out of an element.
 a.	H - Tree
 b.	X - Tree
 c.	Fish bone
+  
 -	Buffering in CTS IS such that it add repeaters in between the flops that only difference is that it have equal rise and fall time.
 -	Clock Net Shielding is a stage where it shield the wires from both the sides and is connected to VDD and GND.
 -	It prevents two important problems
+  
 a.	Glitch: It happens when a high signal alter the polarity of switching value which a error in circuit.
+  
 b.	Crosstalk: It happens due to glitch in switching activity which creats a delay in waveform and amplify according to the numbers if elements.
 
 -	The command used for running CTS in OpenLANE is given below.
@@ -699,8 +706,8 @@ Further analysis of CTS in done in openROAD which is integrated in openLANE flow
 In openROAD the timing analysis is done by creating a db file from `lef` and `def` files. `lef` file won't change as it a tecnology file, `def` file changes when a new is added.
 
 ```
-% read_lef /openLANE_flow/designs/picorv32a/runs/03-07_16-12/tmp/merged.lef
-% read_def /openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/cts/picorv32a.cts.def
+% read_lef /openLANE_flow/designs/picorv32a/runs/test1/tmp/merged.lef
+% read_def /openLANE_flow/designs/picorv32a/runs/test1/results/cts/picorv32a.cts.def
 % write_db picorv32a_cts.db
 ```
   
@@ -711,7 +718,7 @@ This creates db file in `$OPENLANE_ROOT` directory.
 
 ```
 •	% read_db picorv32a_cts.db
-•	% read_verilog /openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/synthesis/picorv32a.synthesis_cts.v
+•	% read_verilog /openLANE_flow/designs/picorv32a/runs/test1/results/synthesis/picorv32a.synthesis_cts.v
 •	% read_liberty -max $::env(LIB_SLOWEST)
 •	% read_liberty -min $::env(LIB_FASTEST)
 •	% read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
@@ -741,16 +748,15 @@ Trying removing `sky130_fd_sc_hd__clkbuf_1` from clock tree and do post cts timi
 
 ```
 •	% echo $::env(CURRENT_DEF)
-•	/openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/cts/picorv32a.cts.def
+•	/openLANE_flow/designs/picorv32a/runs/test1/results/cts/picorv32a.cts.def
 •	% 
-•	% set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/03-07_16-12/results/placement/picorv32a.placement.def
+•	% set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/test1/results/placement/picorv32a.placement.def
 ```
 
 Now run openROAD and do a timing analysis as mentioned above.
 [horizontal]
-`hold_slack`:: 0.1828 ns
-`setup_slack`:: 4.5457 ns
-
+`hold_slack`:: 0.1840 ns
+`setup_slack`:: 4.7490 ns
 Including large size clock buffers in clock path improves slack but area increases.
 
 To check the clock skew
