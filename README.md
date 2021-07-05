@@ -553,7 +553,14 @@ Below figure shows the waveform of Inverter output vs input w.r.t. time. Many ti
   
 ![9](https://user-images.githubusercontent.com/20563301/124389664-c6834a00-dd05-11eb-9cc9-23783bcff68b.PNG)
   
+ 
+  - Rise transition time: It is the difference of y coordinate points(time) of 20% to 80% of input.
   
+  - Fall transition time: It is the difference of y coordinate points(time) of 80% to 20% of input.
+  
+  - Rise time delay: It is the difference of y coordinate points(time) of a point which intersect the input transtition and the output load at 50% of rising edge input.
+
+  - Fall time delay: It is the difference of y coordinate points(time) of a point which intersect the input transtition and the output load at 50% of falling edge input.
 
 # Day 4 - Pre-layout timing analysis and importance of good clock tree
   
