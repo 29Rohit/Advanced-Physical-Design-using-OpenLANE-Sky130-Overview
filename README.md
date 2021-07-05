@@ -732,7 +732,7 @@ For typical corners (`LIB_SYN_COMPLETE` env variable which points to typical lib
   | Name of slack | Value |
   | --- | --- |
   | hold_slack | 0.1667 ns |
-  | setup_slack | 4.5420 ns |
+  | setup_slack | 4.5820 ns |
   
   
   
@@ -759,8 +759,8 @@ Trying removing `sky130_fd_sc_hd__clkbuf_1` from clock tree and do post cts timi
 Now run openROAD and do a timing analysis as mentioned above.
   | Name of slack | Value |
   | --- | --- |
-  | hold_slack | 0.1667 ns |
-  | setup_slack | 4.7490 ns |
+  | hold_slack | 0.1827 ns |
+  | setup_slack | 4.7495 ns |
   
   
   
