@@ -867,7 +867,7 @@ GDSII
 ![10](https://user-images.githubusercontent.com/20563301/124390866-27f9e780-dd0b-11eb-839e-679ef9e48d5d.PNG)
 
 
-`gds` file will be generated at location `/home/rohit/Desktop/designs/picorv32a/runs/test1/results/magic/picorv32a.gds`
+- `gds` file will be generated at location `/home/rohit/Desktop/designs/picorv32a/runs/test1/results/magic/picorv32a.gds`
 
 
  # Acknowledgements 
