@@ -5,7 +5,7 @@
 
 SKY130 is the hardware industry's first open-source process design kit (PDK) released by SkyWater Technology Foundry in collaboration with Google giving all hardware design experts and aficionados, a worldwide access to their IP functions and open source ASICs. More details [here.](https://github.com/google/skywater-pdk).
 
-This particular workshop covers the various aspects of design in Open EDA and Open PDK both theoretically and practically with labs using open-source softwares through their VSD-IAT portal. Beginning with an introduction to digital ASIC design using Openlane and various standar libraby, the instructors cover digital design steps that include design, synthesis simulation, magic simulation, ngspice simulation, OPENSTA, TritonCTS simulation and logic routing with optimization. Further, we learn about various sky130 librarys and foundry IP's in silicon.
+This particular workshop covers the various aspects of design in Open EDA and Open PDK both theoretically and practically with labs using open-source softwares through their VSD-IAT portal. Beginning with an introduction to digital ASIC design using Openlane and various standard libraby, the instructors cover digital design steps that include design, synthesis simulation, magic simulation, ngspice simulation, OPENSTA, TritonCTS simulation and logic routing with optimization. Further, we learn about various sky130 librarys and foundry IP's in silicon.
 
 # Table of Contents
   - [List of All Open-Source Tools Used](#list-of-all-open-source-tools-used)
