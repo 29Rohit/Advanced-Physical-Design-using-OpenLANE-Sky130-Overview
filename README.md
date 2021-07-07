@@ -848,9 +848,9 @@ After routing magic tool can be used to get routing view
 
   
 ## SPEF File and GDSII Generation
-  After routing has been completed interconnect parasitics can be extracted to perform sign-off post-route STA analysis. The parasitics are extracted into a SPEF file using SPEF-Extractor.
+  - After routing has been completed interconnect parasitics can be extracted to perform sign-off post-route STA analysis. The parasitics are extracted into a SPEF file using SPEF-Extractor.
 
-`spef` file will be generated after `run_routing` command at location 
+- `spef` file will be generated after `run_routing` command at location 
 `/home/rohit/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/test1/results/routing/picorv32a.spef`
   
 ![9](https://user-images.githubusercontent.com/20563301/124390863-24666080-dd0b-11eb-958e-745ccbb721f1.PNG)
@@ -858,9 +858,9 @@ After routing magic tool can be used to get routing view
 
 GDSII
   
-GDSII files are usually the final output product of the IC design cycle and are given to silicon foundries for IC fabricationIt is a binary file format representing planar geometric shapes, text labels, and other information about the layout in hierarchical form.
+- GDSII files are usually the final output product of the IC design cycle and are given to silicon foundries for IC fabricationIt is a binary file format representing planar geometric shapes, text labels, and other information about the layout in hierarchical form.
 
-To generate GDSII file, type the below command in openlane after the routing
+- To generate GDSII file, type the below command in openlane after the routing
 ```
 % run_magic
 ```
