@@ -2,7 +2,6 @@
 
 ![work2](https://user-images.githubusercontent.com/20563301/123817565-e71e5f00-d915-11eb-8fa1-ba4fb781980c.PNG)
 
-This repository contains the usage of tools like iverilog, gtkwave and yosys for open-source RTL Design. The content is documentation of tasks carried out during VSD "RTL Design Using Verilog With SKY130 Technology".
 
 SKY130 is the hardware industry's first open-source process design kit (PDK) released by SkyWater Technology Foundry in collaboration with Google giving all hardware design experts and aficionados, a worldwide access to their IP functions and open source ASICs. More details [here.](https://github.com/google/skywater-pdk).
 
